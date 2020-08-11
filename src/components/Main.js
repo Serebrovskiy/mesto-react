@@ -1,6 +1,6 @@
 import React from 'react';
-import { api } from '../utils/Api';
 import Card from './Card';
+import { api } from '../utils/api';
 
 function Main({onEditAvatar, onEditProfile, onAddCard, onCardClick}) {
   const [userName, setUserName] = React.useState('');
@@ -38,12 +38,12 @@ function Main({onEditAvatar, onEditProfile, onAddCard, onCardClick}) {
     <>
       <section className="profile">
         <div className="profile__avatar-container" onClick={onEditAvatar}>
-          <img className="profile__avatar" src={userAvatar} alt="Аватар" /> {/* 'images/Jacques-Yves-Cousteau.jpg' */}
+          <img className="profile__avatar" src={userAvatar} alt="Аватар" /> 
         </div>
         <div className="profile__name-block">
           <h2 className="profile__name">{userName}</h2>  {/* Жак-Ив Кусто */}
           <button type="button" className="profile__edit" onClick={onEditProfile}></button>
-          <p className="profile__profession">{userDescription}</p> {/* Исследователь океана */}
+          <p className="profile__profession">{userDescription}</p>
         </div>
         <button type="button" className="profile__button" onClick={onAddCard}></button>
       </section>

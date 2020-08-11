@@ -26,8 +26,7 @@
       method: 'GET',
       headers: this._headers
 
-    }).then(this._getResponse)
-    .catch((err) => console.log(err));
+    }).then(this._getResponse);
   }
 
   //обновляем данные о профиле

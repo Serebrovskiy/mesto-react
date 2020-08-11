@@ -53,8 +53,14 @@ function App() {
           isOpen={isEditAvatarPopupOpen}
           onClose={closeAllPopups}
         >
-          <input id="avatar-input" type="url" name="inputAvatar" placeholder="Ссылка на аватар"
-            className="popup__input-text popup__input-text_type_avatar" required />
+          <input
+            id="avatar-input"
+            type="url"
+            name="inputAvatar"
+            placeholder="Ссылка на аватар"
+            className="popup__input-text popup__input-text_type_avatar"
+            required
+          />
           <span id="avatar-input-error" className="popup__input-error"></span>
         </ PopupWithForm>
 
@@ -64,11 +70,23 @@ function App() {
           isOpen={isAddPlacePopupOpen}
           onClose={closeAllPopups}
         >
-          <input id="place-input" type="text" name="inputCardName" placeholder="Название"
-            className="popup__input-text popup__input-text_type_place" required />
+          <input
+            id="place-input"
+            type="text"
+            name="inputCardName"
+            placeholder="Название"
+            className="popup__input-text popup__input-text_type_place"
+            required
+          />
           <span id="place-input-error" className="popup__input-error"></span>
-          <input id="image-input" type="url" name="inputCardImage" placeholder="Ссылка на картинку"
-            className="popup__input-text popup__input-text_type_image" required />
+          <input
+            id="image-input"
+            type="url"
+            name="inputCardImage"
+            placeholder="Ссылка на картинку"
+            className="popup__input-text popup__input-text_type_image"
+            required
+          />
           <span id="image-input-error" className="popup__input-error"></span>
         </ PopupWithForm>
 
@@ -78,12 +96,24 @@ function App() {
           isOpen={isEditProfilePopupOpen}
           onClose={closeAllPopups}
         >
-          <input id="name-input" type="text" name="inputProfileName" placeholder="Имя"
-            className="popup__input-text popup__input-text_type_name" required
-            pattern="^[a-zA-Zа-яА-Я\s-]+$" />
+          <input
+            id="name-input"
+            type="text"
+            name="inputProfileName"
+            placeholder="Имя"
+            className="popup__input-text popup__input-text_type_name"
+            required
+            pattern="^[a-zA-Zа-яА-Я\s-]+$"
+          />
           <span id="name-input-error" className="popup__input-error"></span>
-          <input id="profession-input" type="text" name="inputProfileProfession" placeholder="Профессия"
-            className="popup__input-text popup__input-text_type_job" required />
+          <input
+            id="profession-input"
+            type="text"
+            name="inputProfileProfession"
+            placeholder="Профессия"
+            className="popup__input-text popup__input-text_type_job"
+            required
+          />
           <span id="profession-input-error" className="popup__input-error"></span>
         </ PopupWithForm>
 
