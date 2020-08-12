@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card';
-import { api } from './api.js';
+import { api } from '../utils/api.js';
 
 function Main({ onEditAvatar, onEditProfile, onAddCard, onCardClick }) {
   const [userName, setUserName] = React.useState('');
