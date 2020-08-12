@@ -1,4 +1,4 @@
- class Api {
+class Api {
   constructor(options) {
     this._baseUrl = options.baseUrl;
     this._headers = options.headers;
@@ -12,7 +12,6 @@
     }
   }
 
-  //получаем ответ по карточкам которые уже выложены
   getInitialCards() {
     return fetch(`${this._baseUrl}/cards`, {
       method: 'GET',
