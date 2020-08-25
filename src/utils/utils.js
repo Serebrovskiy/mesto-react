@@ -1,28 +1,4 @@
-export const formConfig = {
-  popupList: Array.from(document.querySelectorAll('.popup')),
-  popupProfile: document.querySelector('.popup'),
-  changeProfile: document.querySelector('.popup__container'),
-  buttonOpenProfile: document.querySelector('.profile__edit'),
-  buttonClose: document.querySelector('.popup__close-icon'),
-  nameInput: document.querySelector('.popup__input-text_type_name'),
-  jobInput: document.querySelector('.popup__input-text_type_job'),
-  popupCard: document.querySelector('.popup_add_card'),
-  changeCard: document.querySelector('.popup__container_add_card'),
-  buttonOpenCard: document.querySelector('.profile__button'),
-  placeInput: document.querySelector('.popup__input-text_type_place'),
-  imageInput: document.querySelector('.popup__input-text_type_image'),
-  buttonCloseCard: document.querySelector('.popup__close-icon_add_card'),
-  popupViewImage: document.querySelector('.popup_view-image'),
-  buttonCloseImage: document.querySelector('.popup__close-icon_image'),
-  captionImage: document.querySelector('.popup__caption'),
-  popupImage: document.querySelector('.popup__image'),
-  profileName: document.querySelector('.profile__name'),
-  profileProfession: document.querySelector('.profile__profession'),
-  popupAvatar: document.querySelector('.popup_avatar'),
-  buttonOpenAvatar: document.querySelector('.profile__avatar-container'),
-  profileAvatar: document.querySelector('.profile__avatar'),
-  popupConfirm: document.querySelector('.popup_confirm')
-};
+import Api from './api';
 
 export const formValidationOptions = {
   formProfileSelector: '.popup__container',
@@ -35,5 +11,16 @@ export const formValidationOptions = {
   errorClass: 'popup__input-error_active'
 };
 
+export const api = new Api({
+  baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-13',
+  headers: {
+    authorization: '14553299-9691-455d-8f0e-78b62284ce7d',
+    'Content-Type': 'application/json'
+  }
+});
+
 export const cards = document.querySelector('.cards');
+
+export const avatarLoad = "https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80";
+
 

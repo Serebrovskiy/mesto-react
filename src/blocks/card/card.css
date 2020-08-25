@@ -7,6 +7,8 @@
 @import url(./__like/_active/card__like_active.css);
 @import url(./__container-like/card__container-like.css);
 @import url(./__number-likes/card__number-likes.css);
+@import url(./__basket/_hidden/card__basket_hidden.css);
+@import url(./__basket/_visible/card__basket_visible.css);
 
 .card {
   width: 282px;
