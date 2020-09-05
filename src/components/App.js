@@ -18,15 +18,15 @@ function App() {
   const [currentUser, setCurrentUser] = React.useState('');
 
   function handleEditAvatarClick() {
-    setIsOpenPopupAvatar(!isEditAvatarPopupOpen);
+    setIsOpenPopupAvatar(true);
   }
 
   function handleEditPlaceClick() {
-    setIsOpenPopupPlace(!isAddPlacePopupOpen);
+    setIsOpenPopupPlace(true);
   }
 
   function handleEditProfileClick() {
-    setIsOpenPopupProfile(!isEditProfilePopupOpen);
+    setIsOpenPopupProfile(true);
   }
 
   function handleCardClick(card) {
@@ -72,8 +72,7 @@ function App() {
     setIsOpenPopupAvatar(false);
     setIsOpenPopupPlace(false);
     setIsOpenPopupProfile(false);
-
-    setTimeout(() => setSelectedCard(null), 250);
+    setSelectedCard(null);
   }
 
   function handleCardLike(card) {
@@ -95,14 +94,6 @@ function App() {
   }
 
   React.useEffect(() => {
-    api.getProfile()
-      .then(res => {
-        setCurrentUser(res);
-      }).catch((err) => console.error(err));
-  }, []);
-
-
-  React.useEffect(() => {
     const handleEscClose = (evt) => {
       if (evt.key === "Escape") closeAllPopups();
     }
@@ -119,9 +110,10 @@ function App() {
   });
 
   React.useEffect(() => {
-    api.getInitialCards()
-      .then((res) => {
-        setCards(res.map(item => ({
+    Promise.all([api.getProfile(), api.getInitialCards()])
+      .then(res => {
+        setCurrentUser(res[0]);
+        setCards(res[1].map(item => ({
           _id: item._id,
           likes: item.likes,
           name: item.name,

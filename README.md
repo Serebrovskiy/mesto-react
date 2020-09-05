@@ -21,6 +21,12 @@
 * JS
 * React
 
+## Запуск:
+
+* `npm i` - устанавливаем зависимости
+* `npm run build` - для сборки проекта
+* `npm run start` - для запуска основной версии
+
 ---
 
 [Ссылка на проект](https://serebrovskiy.github.io/mesto-react)
