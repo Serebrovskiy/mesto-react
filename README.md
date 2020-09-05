@@ -18,7 +18,7 @@
 
 * HTML
 * CSS
-* JS
+* JavaScript
 * React
 
 ## Запуск:
